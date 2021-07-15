@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import ToolbarText from '../_shared/ToolbarText';
 import PickerToolbar from '../_shared/PickerToolbar';
 import { ToolbarButton } from '../_shared/ToolbarButton';
 import DateTimePickerTabs from './DateTimePickerTabs';

@@ -12,7 +12,7 @@ import { DateAndTimeValidationError, validateDateAndTime } from './date-time-uti
 import { makeValidationHook, ValidationProps } from '../_shared/hooks/useValidation';
 import { ParsableDate, defaultMinDate, defaultMaxDate } from '../constants/prop-types';
 
-export type DateTimePickerView = 'year' | 'date' | 'month' | 'hours' | 'minutes' | 'seconds';
+export type DateTimePickerView = 'year' | 'date' | 'month' | 'hours';
 
 type DateTimePickerViewsProps<TDate> = OverrideParsableDateProps<
   TDate,
@@ -21,7 +21,7 @@ type DateTimePickerViewsProps<TDate> = OverrideParsableDateProps<
 >;
 
 export interface BaseDateTimePickerProps<TDate>
-  extends WithViewsProps<'year' | 'date' | 'month' | 'hours' | 'minutes'>,
+  extends WithViewsProps<'year' | 'date' | 'month' | 'hours'>,
     ValidationProps<DateAndTimeValidationError, ParsableDate>,
     DateTimePickerViewsProps<TDate> {
   /**
@@ -61,7 +61,7 @@ function useInterceptProps({
   minTime: __minTime,
   openTo = 'date',
   orientation = 'portrait',
-  views = ['year', 'date', 'hours', 'minutes'],
+  views = ['year', 'date', 'hours'],
   ...other
 }: BaseDateTimePickerProps<unknown> & AllSharedPickerProps) {
   const utils = useUtils();
