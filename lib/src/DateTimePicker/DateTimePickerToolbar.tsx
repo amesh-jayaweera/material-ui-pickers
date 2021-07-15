@@ -122,16 +122,6 @@ export const DateTimePickerToolbar: React.FC<ToolbarComponentProps> = withDefaul
                 value={date ? formatHours(date) : '--'}
                 typographyClassName={classes.timeTypography}
               />
-              <ToolbarText variant="h3" value=":" className={classes.separator} />
-              <ToolbarButton
-                tabIndex={-1}
-                variant="h3"
-                data-mui-test="minutes"
-                onClick={() => setOpenView('minutes')}
-                selected={openView === 'minutes'}
-                value={date ? utils.format(date, 'minutes') : '--'}
-                typographyClassName={classes.timeTypography}
-              />
             </div>
           </PickerToolbar>
         )}
